@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeTrusty Interface</title>
+    <style>
+        h1, div { text-align: center }
+    </style>
+</head>
+<body>
+    <h1>Configure DeTrusty</h1>
+    <div>
+        <form method="post">
+            <label for="endpoint_url">URL of SPARQL endpoint:</label>&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="http://lubm:8890/sparql" id="endpoint_url" name="endpoint_url">&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="Configure!">
+        </form>
+    </div>
+
+    {% if success is not none %}
+        {% if success %}
+            <div style="color: green; margin-top: 30px">DeTrusty has been configured successfully.</div>
+        {% else %}
+            <div style="color: red; margin-top: 30px">There was an error while configuring DeTrusty. Please, check the URL and try again.</div>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

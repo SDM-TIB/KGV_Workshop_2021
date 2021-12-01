@@ -1,0 +1,13 @@
+outputs
+scripts
+
+*.pyc
+__pycache__/
+
+venv/
+
+.idea/
+**/.DS_Store
+
+parsetab.py
+

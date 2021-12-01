@@ -1,0 +1,10 @@
+SPARQLWrapper
+pytest
+pytest-dependency
+pytest-timeout
+flask
+rdflib
+requests
+pyinstrument
+PyYaml
+regex

@@ -1,0 +1,22 @@
+version: '2.3'
+
+services:
+  lubm:
+    image: prohde/virtuoso-opensource-7:7.2.6-alpine
+    container_name: lubm
+    volumes:
+      - ./datasources/lubm:/database/toLoad
+    ports:
+      - '15000:8890'
+
+  valsparql:
+    build: ./code/
+    image: valsparql
+    container_name: valsparql
+    volumes:
+      - ./api_configs:/inputs/api_configs
+      - ./shapes:/inputs/shapes
+    mem_limit: 8g
+    ports:
+      - '5001:5000'
+

@@ -1,0 +1,15 @@
+*.pyc
+__pycache__/
+
+instance/
+
+dist/
+build/
+*.egg-info
+
+venv/
+
+.idea/
+**/.DS_Store
+
+DeTrusty/Sparql/Parser/parsetab.py

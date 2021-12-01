@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeTrusty Interface</title>
+    <style>
+        h1, div { text-align: center }
+    </style>
+</head>
+<body>
+    <h1>Run a SPARQL query with DeTrusty</h1>
+    <div>
+        <form method="post">
+            <input type="hidden" id="table" name="table" value="true">
+            <input type="checkbox" name="validate" id="validate"><label for="validate"> Validate integrity constraints in:   </label><input type="text" disabled placeholder="/inputs/shapes/lubm/"><br><br>
+            <label for="query">SPARQL query:</label><br>
+            <textarea id="query" name="query" rows="20" cols="100">PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+
+SELECT DISTINCT ?s WHERE {
+    ?s a ub:FullProfessor .
+}</textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "backend": "travshacl",
+    "start_with_target_shape": true,
+    "replace_target_query": true,
+    "prune_shape_network": true,
+    "output_format": "stats",
+    "join_implementation": "Xgjoin",
+    "reasoning": false,
+    "run_in_serial": true
+}
